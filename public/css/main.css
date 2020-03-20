@@ -1,11 +1,13 @@
 /*Specification*/
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
     margin: 0;
     background-color: #F4F5FC;
+    font-family: 'Work Sans', sans-serif;
 }
 
 li {
@@ -15,14 +17,29 @@ li {
 input {
     outline: none;
     border: none;
+    font-family: 'Work Sans', sans-serif;
+}
+
+select {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
 }
 
 /*Registration*/
 .registration {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     height: 100vh;
     width: 100%;
     padding: 10px;
@@ -31,9 +48,16 @@ input {
 .registration-wrap {
     width: 665px;
     height: 481px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .registration-title {
@@ -51,65 +75,89 @@ input {
     position: relative;
 }
 
+.registration-form__bg {
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    pointer-events: none;
+}
+
 .registration-title__text {
-    font-family: PT Sans;
+    font-family: 'PT Sans', sans-serif;
     position: absolute;
     bottom: 25px;
     right: 10px;
     display: block;
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
     font-size: 49px;
-    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
     color: white;
 }
 
 .registration-form__title {
-    font-family: Work Sans;
     font-weight: bolder;
     font-size: 22px;
     color: #111111;
 }
 
 .registration-form__description {
-    font-family: Work Sans;
     font-size: 14px;
     margin-top: 3px;
 }
 
 .registration-form__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 20px;
 }
 
 .form-item {
     width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 5px;
+    position: relative;
 }
 
 .form-item__label {
-    font-family: Work Sans;
+    
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
     line-height: 14px;
     color: #7C7C7C;
+    z-index: 1;
 }
 
 .form-item input {
     padding: 7px 0;
     border-bottom: 1px solid #F2F2F2;
-    font-family: Work Sans;
     font-size: 15px;
+    z-index: 1;
+    background-color: transparent;
 }
 
 .registration-form__info {
-    font-family: Work Sans;
     font-size: 14px;
 }
 
@@ -127,22 +175,32 @@ input {
     height: 32px;
     background-color: #5A61ED;
     color: white;
-    font-family: PT Sans;
+    font-family: 'PT Sans', sans-serif;
     font-size: 14px;
     cursor: pointer;
 }
 
 /*Radio input*/
 .registration-form__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     bottom: 20px;
     left: 20px;
     padding-right: 40px;
+    z-index: 1;
 }
 
 .radio:not(checked) {
@@ -155,7 +213,6 @@ input {
 .radio:not(checked) + label {
     position: relative;
     padding: 0 0 0 20px;
-    font-family: Work Sans;
     font-size: 14px;
 }
 
@@ -185,6 +242,8 @@ input {
     border-radius: 50%;
     background: #6365ED;
     opacity: 0;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
     transition: .2s;
 }
 
@@ -193,7 +252,10 @@ input {
 }
 
 .radio-btns {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin-top: 7px;
 }
 
@@ -210,34 +272,73 @@ input {
 }
 
 .birth-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-.birth-row * {
-    font-family: Work Sans;
-    font-size: 14px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .select-item {
     position: relative;
-}
-
-.select-item svg {
-    position: absolute;
-    right: 5px;
-    background: white;
-    top: 11px;
-    height: 10px;
-    pointer-events: none;
+    height: 34px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 .select-item select {
     width: 100%;
 }
 
-select {
-    font-family: Work Sans;
-    font-size: 15px;
+.select-item__arrow {
+    position: absolute;
+    right: 0px;
+    background-color: white;
+    top: 0px;
+    height: 33px;
+    pointer-events: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 17px;
+    background-color: white;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.confirm-input:after {
+    content: url('data:image/svg+xml; base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgMTEgOCIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTEwLjgzODkgMC4xNTk1NDFDMTAuNjI0MSAtMC4wNTMxODAzIDEwLjI3NTkgLTAuMDUzMTgwMyAxMC4wNjExIDAuMTU5NTQxTDMuNDcxNzUgNi42ODUxNkwwLjkzODkyIDQuMTc2ODRDMC43MjQxNDEgMy45NjQxMiAwLjM3NTkyMiAzLjk2NDE0IDAuMTYxMSA0LjE3Njg0Qy0wLjA1MzcwMDEgNC4zODk1NCAtMC4wNTM3MDAxIDQuNzM0MzkgMC4xNjExIDQuOTQ3MTFMMy4wODI4NCA3Ljg0MDUzQzMuMjk3NTYgOC4wNTMyMyAzLjY0NjAzIDguMDUzMDggMy44NjA2NiA3Ljg0MDUzTDEwLjgzODkgMC45Mjk4MzFDMTEuMDUzNyAwLjcxNzEzMSAxMS4wNTM3IDAuMzcyMjYyIDEwLjgzODkgMC4xNTk1NDFaIiBmaWxsPSIjNUE2MUVEIi8+PC9zdmc+');
+    background-size: 28px 28px;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: 0;
+    top: 26px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.warning-input {
+    color: #FF2222;
+    border-bottom: 2px solid #FF2222!important;
 }
