@@ -56,4 +56,14 @@
     .form-item input {
         height: 40px;
     }
+    .registration-form__success-info {
+        position: static;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+    }
+    .registration-form__success .registration-form__info {
+        position: static;
+        margin-top: 40px;
+    }
 }
