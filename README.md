@@ -1,5 +1,4 @@
 # registrationForm
-DEMO => http://usefulwd.site
 
 ## Тестовое задание на должность верстальщика
 
