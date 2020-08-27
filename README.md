@@ -1,5 +1,5 @@
 # registrationForm
-DEMO => https://learnreact-todoo.web.app
+DEMO => https://registration-form-html.web.app/
 
 ## Тестовое задание на должность верстальщика
 
